@@ -1,0 +1,35 @@
+.app-root {
+    -fx-background-color: #FFFDD0; /* crema */
+}
+
+.header {
+    -fx-padding: 16 24 8 24;
+    -fx-background-color: #fcf8b2; /* amarillo más marcado para header */
+}
+
+.title {
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+/* Tarjeta */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 14, 0.2, 0, 2);
+}
+
+/* Botones */
+.btn {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 10 18;
+}
+.btn-primary   { -fx-background-color: #27ae60; }
+.btn-primary:hover { -fx-background-color: #219653; }
+.btn-secondary { -fx-background-color: #9c9fa0; }
+.btn-secondary:hover { -fx-background-color: #8c8f90; }

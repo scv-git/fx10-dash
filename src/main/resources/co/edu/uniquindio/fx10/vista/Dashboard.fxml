@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<?import java.net.URL?>
+<VBox fx:id="contenedorPrincipal"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.fx10.controlador.DashboardController"
+      spacing="20"
+      alignment="TOP_LEFT"
+      styleClass="app-root">
+
+    <!-- Cargar CSS desde src/main/java con ruta absoluta -->
+    <stylesheets>
+        <URL value="file:///C:/Users/Santiago%20CV/Documents/Programacion/fx10-dash/src/main/java/co/edu/uniquindio/fx10/estilos/dashboard.css"/>
+    </stylesheets>
+
+    <!-- Margen interno del dashboard -->
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Encabezado -->
+    <HBox alignment="CENTER_LEFT" spacing="16">
+        <Label fx:id="lblTitulo" text="Dashboard de Productos" styleClass="title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <!-- Tarjeta compacta para acciones (evita que se “estire” a toda la ventana) -->
+    <VBox styleClass="card" spacing="12" prefWidth="420" maxWidth="520">
+        <padding>
+            <Insets top="14" right="14" bottom="14" left="14"/>
+        </padding>
+
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button fx:id="btnCrearProducto"
+                    text="Agregar Producto"
+                    onAction="#onIrFormularioProducto"
+                    styleClass="btn btn-primary"/>
+            <Button fx:id="btnEliminar"
+                    text="Lista de Productos"
+                    onAction="#onIrListadoProducto"
+                    styleClass="btn btn-secondary"/>
+        </HBox>
+    </VBox>
+
+</VBox>
